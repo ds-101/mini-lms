@@ -47,6 +47,7 @@ const authRoutes = require("./routes/auth");       // ✅ alias: authRoutes
 const courseRoutes = require("./routes/course");   // ✅ alias: courseRoutes
 const enrollmentRoutes = require("./routes/enrollment");
 const quizRoutes = require("./routes/quiz");
+const certificateRoutes = require("./routes/certificate");
 
 const app = express();
 
@@ -59,6 +60,7 @@ app.use("/api/auth", authRoutes);       // all auth related APIs
 app.use("/api/courses", courseRoutes);  // all course related APIs
 app.use("/api/enrollments", enrollmentRoutes);
 app.use("/api/quizzes", quizRoutes);
+app.use("/api/certificates", certificateRoutes);
 
 // Root test
 app.get("/", (req, res) => {
